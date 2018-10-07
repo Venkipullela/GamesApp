@@ -26,6 +26,7 @@
     <string name="title_activity_login">Sign in</string>
     <string name="error_hint">* This field can\'t be empty</string>
     <string name="password_mismatch">* Passwords didn\'t match</string>
+    <string name="invalid_mobile">* Enter a valid 10 digit mobile number</string>
     <string name="user_name">* User Name</string>
     <string name="optional_email">Email (Optional)</string>
     <string name="mandaotry_fields">Fields marked with (*) can\'t be empty</string>
