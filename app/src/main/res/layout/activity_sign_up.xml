@@ -49,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <TextView
-        android:id="@+id/fields_mandatory"
+        android:id="@+id/alert_message"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
@@ -99,7 +99,7 @@
         android:textColor="@color/text_color_light"
         android:textColorHint="@color/hint_color_light"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/fields_mandatory"
+        app:layout_constraintBottom_toTopOf="@+id/alert_message"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -111,7 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
         android:hint="@string/button_send"
-        android:onClick="loadData"
+        android:onClick="onClickSignUp"
         android:text="@string/sign_up"
         android:textColor="@color/text_color_dark"
         android:textColorHint="@color/text_color_dark"
