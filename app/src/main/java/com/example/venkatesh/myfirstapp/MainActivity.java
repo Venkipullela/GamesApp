@@ -4,17 +4,22 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 
+/**
+ * Main Launcher Activity of this application
+ * @author venkatesh
+ */
 public class MainActivity extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
-    /** Called when the user taps the Send button */
+    /** Called when the user taps the SignUp button
+     * on the MainActivity
+     */
     public void signUp(View view) {
         Intent intent = new Intent(this, SignUp.class);
         startActivity(intent);
