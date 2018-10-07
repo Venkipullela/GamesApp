@@ -9,7 +9,7 @@
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in">Sign in</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
@@ -30,4 +30,6 @@
     <string name="user_name">* User Name</string>
     <string name="optional_email">Email (Optional)</string>
     <string name="mandaotry_fields">Fields marked with (*) can\'t be empty</string>
+    <string name="prompt_register">No account yet? Create one!</string>
+    <string name="prompt_forgot_password">Forgot your password?</string>
 </resources>
