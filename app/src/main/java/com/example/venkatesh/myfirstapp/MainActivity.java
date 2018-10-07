@@ -25,5 +25,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     *
+     * @param view
+     * Called when the user taps on the sign in button.
+     */
+    public void signIn(View view) {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+
 
 }
