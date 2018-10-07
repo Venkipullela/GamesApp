@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class SignUp extends AppCompatActivity {
 
@@ -17,45 +18,22 @@ public class SignUp extends AppCompatActivity {
     
     
     public void loadData(View view) throws Exception{
+        String username = ((EditText) findViewById(R.id.username)).getText().toString();
         String email = ((EditText) findViewById(R.id.email)).getText().toString();
         String password = ((EditText)findViewById(R.id.password)).getText().toString();
         String password_re = ((EditText)findViewById(R.id.password_re)).getText().toString();
         String phone = ((EditText)findViewById(R.id.phone)).getText().toString();
         boolean flag = true;
-        if(email.isEmpty()){
-            //((EditText) findViewById(R.id.email)).setHint("Email is empty");
-            findViewById(R.id.email_eh).setVisibility(View.VISIBLE);
+        if(username.isEmpty() || password.isEmpty() || password_re.isEmpty() || phone.isEmpty()){
+            findViewById(R.id.fields_mandatory).setVisibility(View.VISIBLE);
             flag = false;
-        }else {
-            findViewById(R.id.email_eh).setVisibility(View.INVISIBLE);
-        }
-        if(password.isEmpty()){
-//            ((EditText) findViewById(R.id.password)).setHint("Password is empty");
-            findViewById(R.id.password_eh).setVisibility(View.VISIBLE);
-            flag = false;
-        }else {
-            findViewById(R.id.password_eh).setVisibility(View.INVISIBLE);
-        }
-        if(password_re.isEmpty()){
-//            ((EditText) findViewById(R.id.password_re)).setHint("Confirm Password is empty");
-            findViewById(R.id.confirm_password_eh).setVisibility(View.VISIBLE);
-            flag = false;
-        }else {
-            findViewById(R.id.confirm_password_eh).setVisibility(View.INVISIBLE);
-        }
-        if(phone.isEmpty()){
-//            ((EditText) findViewById(R.id.phone)).setHint("Phone Number is empty");
-            findViewById(R.id.phone_eh).setVisibility(View.VISIBLE);
-            flag = false;
-        }else {
-            findViewById(R.id.phone_eh).setVisibility(View.INVISIBLE);
         }
         if(!flag){
             return;
         }else {
             if(!password.equals(password_re)){
-                ((EditText) findViewById(R.id.password_re)).setText("Password didn't match");
-                ((EditText) findViewById(R.id.password)).setText("Password didn't match");
+                ((TextView)findViewById(R.id.fields_mandatory)).setText(R.string.password_mismatch);
+                findViewById(R.id.fields_mandatory).setVisibility(View.VISIBLE);
                 return;
             }
             Intent intent = new Intent(this, SignUpSuccess.class);

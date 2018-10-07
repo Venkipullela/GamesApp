@@ -8,40 +8,6 @@
     tools:context=".SignUp"
     tools:layout_editor_absoluteY="81dp">
 
-    <TextView
-        android:id="@+id/confirm_password_eh"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:text="@string/error_hint"
-        android:textColor="@color/error_hint_dark"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_re" />
-
-    <TextView
-        android:id="@+id/password_eh"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:text="@string/error_hint"
-        android:textColor="@color/error_hint_dark"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/password_re"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
-
     <EditText
         android:id="@+id/email"
         android:layout_width="0dp"
@@ -51,17 +17,16 @@
         android:layout_marginEnd="48dp"
         android:layout_marginRight="48dp"
         android:ems="10"
-        android:hint="@string/prompt_email"
+        android:hint="@string/optional_email"
         android:inputType="textEmailAddress"
         android:textColor="@color/text_color_light"
         android:textColorHint="@color/hint_color_light"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/email_eh"
+        app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <EditText
         android:id="@+id/password"
@@ -77,21 +42,21 @@
         android:textColor="@color/text_color_light"
         android:textColorHint="@color/hint_color_light"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/password_eh"
+        app:layout_constraintBottom_toTopOf="@+id/password_re"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_eh" />
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <TextView
-        android:id="@+id/phone_eh"
+        android:id="@+id/fields_mandatory"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginLeft="48dp"
         android:layout_marginEnd="48dp"
         android:layout_marginRight="48dp"
-        android:text="@string/error_hint"
+        android:text="@string/mandaotry_fields"
         android:textColor="@color/error_hint_dark"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/signup"
@@ -114,11 +79,11 @@
         android:textColor="@color/text_color_light"
         android:textColorHint="@color/hint_color_light"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/confirm_password_eh"
+        app:layout_constraintBottom_toTopOf="@+id/phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_eh" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <EditText
         android:id="@+id/phone"
@@ -134,12 +99,11 @@
         android:textColor="@color/text_color_light"
         android:textColorHint="@color/hint_color_light"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/phone_eh"
+        app:layout_constraintBottom_toTopOf="@+id/fields_mandatory"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_password_eh"
-        app:layout_constraintVertical_bias="0.729" />
+        app:layout_constraintTop_toBottomOf="@+id/password_re" />
 
     <Button
         android:id="@+id/signup"
@@ -157,7 +121,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.90999997" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -165,6 +129,7 @@
         android:layout_height="100dp"
         android:layout_marginStart="48dp"
         android:layout_marginLeft="48dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="48dp"
         android:layout_marginRight="48dp"
         android:contentDescription="@string/welcome_image"
@@ -172,25 +137,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="spread_inside"
-        app:srcCompat="@drawable/welcome"
-        tools:layout_editor_absoluteY="48dp" />
+        app:srcCompat="@drawable/welcome" />
 
-    <TextView
-        android:id="@+id/email_eh"
+    <EditText
+        android:id="@+id/username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginLeft="48dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="48dp"
         android:layout_marginRight="48dp"
-        android:text="@string/error_hint"
-        android:textColor="@color/error_hint_dark"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/password"
+        android:ems="10"
+        android:hint="@string/user_name"
+        android:inputType="textPersonName"
+        android:textColor="@color/text_color_light"
+        android:textColorHint="@color/hint_color_light"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="packed" />
 
 </android.support.constraint.ConstraintLayout>

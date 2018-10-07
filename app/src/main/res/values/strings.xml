@@ -7,7 +7,7 @@
     <string name="sign_up">SignUp</string>
     <string name="title_activity_sign_up">Sign Up</string>
     <!-- Strings related to login -->
-    <string name="prompt_email">Email Or Phone</string>
+    <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
@@ -18,11 +18,15 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="password">Password</string>
-    <string name="password_re">Confirm Password</string>
-    <string name="phone">Phone Number</string>
+    <string name="password">* Password</string>
+    <string name="password_re">* Confirm Password</string>
+    <string name="phone">* Phone Number</string>
     <string name="success_signup">Sign Up Successfully Completed</string>
     <string name="welcome_image">welcome_image</string>
     <string name="title_activity_login">Sign in</string>
     <string name="error_hint">* This field can\'t be empty</string>
+    <string name="password_mismatch">* Passwords didn\'t match</string>
+    <string name="user_name">* User Name</string>
+    <string name="optional_email">Email (Optional)</string>
+    <string name="mandaotry_fields">Fields marked with (*) can\'t be empty</string>
 </resources>
